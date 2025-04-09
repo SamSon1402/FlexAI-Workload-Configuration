@@ -61,4 +61,4 @@ This application is built with Streamlit and uses a combination of rules-based r
 
 ---
 
-Created by the FlexAI Platform Team © 2025
+Created for FlexAI Platform Team © 2025
