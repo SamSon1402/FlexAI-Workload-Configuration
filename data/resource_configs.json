@@ -1,0 +1,65 @@
+{
+    "gpu_types": {
+      "NVIDIA T4": {
+        "description": "Entry-level GPU good for small models and inference",
+        "vram": "16 GB",
+        "relative_performance": 1.0,
+        "hourly_cost": 0.76,
+        "suitable_for": ["Inference", "Small Training"],
+        "availability": "High"
+      },
+      "NVIDIA A10G": {
+        "description": "Mid-range GPU for most training tasks",
+        "vram": "24 GB",
+        "relative_performance": 2.5,
+        "hourly_cost": 1.40,
+        "suitable_for": ["Training", "Fine-tuning", "Inference"],
+        "availability": "Medium"
+      },
+      "NVIDIA A100": {
+        "description": "High-performance GPU for large models and training",
+        "vram": "40/80 GB",
+        "relative_performance": 5.0,
+        "hourly_cost": 2.89,
+        "suitable_for": ["Large Model Training", "Fine-tuning"],
+        "availability": "Limited"
+      },
+      "NVIDIA H100": {
+        "description": "Cutting-edge GPU for the most demanding workloads",
+        "vram": "80 GB",
+        "relative_performance": 8.0,
+        "hourly_cost": 5.76,
+        "suitable_for": ["XL Model Training", "Research"],
+        "availability": "Very Limited"
+      }
+    },
+    "instance_types": {
+      "flex-economy": {
+        "description": "Preemptible instances with lower cost but potential interruptions",
+        "cpu_ram": "16-32 GB",
+        "cost_multiplier": 0.6,
+        "reliability": "Medium",
+        "suitable_for": ["Batch processing", "Non-critical workloads"]
+      },
+      "flex-standard": {
+        "description": "Standard reliable instances for most workloads",
+        "cpu_ram": "32-64 GB",
+        "cost_multiplier": 1.0,
+        "reliability": "High",
+        "suitable_for": ["Training", "Fine-tuning", "Inference"]
+      },
+      "flex-performance": {
+        "description": "High-performance instances with optimized networking",
+        "cpu_ram": "64-128 GB",
+        "cost_multiplier": 1.4,
+        "reliability": "Very High",
+        "suitable_for": ["Distributed training", "Critical workloads"]
+      }
+    },
+    "regions": [
+      "us-east", "us-west", "europe-west", "asia-east"
+    ],
+    "frameworks": [
+      "PyTorch", "TensorFlow", "JAX", "MXNet"
+    ]
+  }

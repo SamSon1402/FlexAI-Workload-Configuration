@@ -1,0 +1,187 @@
+{
+    "task_type_rules": {
+      "Training": {
+        "XL": {
+          "gpu_type": "NVIDIA H100",
+          "gpu_count": 4,
+          "instance_type": "flex-performance"
+        },
+        "Large": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 4,
+          "instance_type": "flex-performance"
+        },
+        "Medium": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 2,
+          "instance_type": "flex-standard"
+        },
+        "Small": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 2,
+          "instance_type": "flex-standard"
+        }
+      },
+      "Fine-tuning": {
+        "XL": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 2,
+          "instance_type": "flex-standard"
+        },
+        "Large": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        },
+        "Medium": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 2,
+          "instance_type": "flex-standard"
+        },
+        "Small": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        }
+      },
+      "Batch Inference": {
+        "XL": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        },
+        "Large": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 2,
+          "instance_type": "flex-standard"
+        },
+        "Medium": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        },
+        "Small": {
+          "gpu_type": "NVIDIA T4",
+          "gpu_count": 2,
+          "instance_type": "flex-economy"
+        }
+      },
+      "Real-time Inference": {
+        "XL": {
+          "gpu_type": "NVIDIA A100",
+          "gpu_count": 1,
+          "instance_type": "flex-performance"
+        },
+        "Large": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 1,
+          "instance_type": "flex-performance"
+        },
+        "Medium": {
+          "gpu_type": "NVIDIA A10G",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        },
+        "Small": {
+          "gpu_type": "NVIDIA T4",
+          "gpu_count": 1,
+          "instance_type": "flex-standard"
+        }
+      }
+    },
+    "priority_adjustments": {
+      "Minimize Cost": {
+        "gpu_type_downgrade": {
+          "NVIDIA H100": "NVIDIA A100",
+          "NVIDIA A100": "NVIDIA A10G",
+          "NVIDIA A10G": "NVIDIA T4"
+        },
+        "instance_type_downgrade": {
+          "flex-performance": "flex-standard",
+          "flex-standard": "flex-economy"
+        }
+      },
+      "Minimize Time": {
+        "gpu_type_upgrade": {
+          "NVIDIA T4": "NVIDIA A10G",
+          "NVIDIA A10G": "NVIDIA A100",
+          "NVIDIA A100": "NVIDIA H100"
+        },
+        "instance_type_upgrade": {
+          "flex-economy": "flex-standard",
+          "flex-standard": "flex-performance"
+        },
+        "gpu_count_multiplier": 1.5
+      }
+    },
+    "dataset_size_adjustments": {
+      "Very Large (>1TB)": {
+        "gpu_count_multiplier": 2.0
+      },
+      "Large (100GB-1TB)": {
+        "gpu_count_multiplier": 1.5
+      },
+      "Medium (1GB-10GB)": {
+        "gpu_count_multiplier": 1.0
+      },
+      "Small (<1GB)": {
+        "gpu_count_multiplier": 0.75
+      }
+    },
+    "time_estimates": {
+      "Training": {
+        "XL": {
+          "base_hours": 72,
+          "performance_scaling": 0.95
+        },
+        "Large": {
+          "base_hours": 24,
+          "performance_scaling": 0.9
+        },
+        "Medium": {
+          "base_hours": 6,
+          "performance_scaling": 0.85
+        },
+        "Small": {
+          "base_hours": 2,
+          "performance_scaling": 0.8
+        }
+      },
+      "Fine-tuning": {
+        "XL": {
+          "base_hours": 24,
+          "performance_scaling": 0.9
+        },
+        "Large": {
+          "base_hours": 10,
+          "performance_scaling": 0.85
+        },
+        "Medium": {
+          "base_hours": 3,
+          "performance_scaling": 0.8
+        },
+        "Small": {
+          "base_hours": 1,
+          "performance_scaling": 0.75
+        }
+      },
+      "Batch Inference": {
+        "XL": {
+          "base_hours": 8,
+          "performance_scaling": 0.95
+        },
+        "Large": {
+          "base_hours": 3,
+          "performance_scaling": 0.9
+        },
+        "Medium": {
+          "base_hours": 1,
+          "performance_scaling": 0.85
+        },
+        "Small": {
+          "base_hours": 0.5,
+          "performance_scaling": 0.8
+        }
+      }
+    }
+  }

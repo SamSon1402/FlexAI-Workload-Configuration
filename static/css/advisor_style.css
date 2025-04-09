@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Main container styling */
+.main {
+    background-color: #f5f0ff;
+    color: #0a0a20;
+}
+
+/* Header styling */
+h1, h2, h3 {
+    font-family: 'VT323', monospace;
+    color: #6200ea;
+    text-shadow: 1px 1px 0px #e0aaff;
+    padding: 10px;
+    border: 2px solid #6200ea;
+    background-color: #e0aaff;
+}
+
+/* Text styling */
+p, li {
+    font-family: 'Roboto Mono', monospace;
+    color: #0a0a20;
+}
+
+/* Button styling */
+.stButton button {
+    font-family: 'VT323', monospace;
+    background-color: #6200ea;
+    color: #ffffff;
+    border: 2px solid #e0aaff;
+    box-shadow: 3px 3px 0px #e0aaff;
+}
+
+/* Selectbox styling */
+.stSelectbox {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Card-like containers */
+.css-card {
+    border: 2px solid #6200ea;
+    border-radius: 0px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e0aaff;
+    box-shadow: 4px 4px 0px #6200ea;
+}
+
+/* Metric styling */
+.metric-container {
+    background-color: #e0aaff;
+    border: 2px solid #6200ea;
+    padding: 15px;
+    text-align: center;
+    margin: 5px;
+}
+
+.metric-value {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    color: #6200ea;
+}
+
+.metric-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    color: #0a0a20;
+}
+
+/* Divider */
+hr {
+    border: 1px dashed #6200ea;
+}
+
+/* Sidebar */
+.css-1d391kg, [data-testid="stSidebar"] {
+    background-color: #e0aaff;
+}
+
+/* Labels for sliders and radio buttons */
+.css-16huue1, .css-16huue1 p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+/* Recommendation box */
+.recommendation-box {
+    background-color: #e0aaff;
+    border: 2px solid #6200ea;
+    padding: 20px;
+    margin: 10px 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.recommendation-title {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: #6200ea;
+    margin-bottom: 15px;
+}
+
+.recommendation-subtitle {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: #6200ea;
+    margin: 10px 0;
+}
+
+.recommendation-detail {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+}
+
+/* Resource pill styles */
+.resource-pill {
+    display: inline-block;
+    background-color: #6200ea;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 15px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Animated pulse effect */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(98, 0, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(98, 0, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(98, 0, 234, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Recommendation justification */
+.justification {
+    background-color: #f5f0ff;
+    border-left: 4px solid #6200ea;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Cost vs Speed slider */
+.slider-label-left {
+    float: left;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #6200ea;
+}
+
+.slider-label-right {
+    float: right;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #6200ea;
+}
+
+.slider-container {
+    margin: 25px 0;
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-family: 'VT323', monospace;
+    background-color: #f5f0ff;
+    border: 2px solid #6200ea;
+    border-radius: 0px;
+    color: #0a0a20;
+    padding: 10px 20px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #6200ea;
+    color: #ffffff;
+}
+
+/* Form styling */
+.stForm > div:first-child {
+    border: 2px solid #6200ea;
+    padding: 20px;
+    border-radius: 0;
+    background-color: #e0aaff;
+}
+
+.stForm [data-baseweb="button"] {
+    background-color: #6200ea;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    border: 2px solid #f5f0ff;
+    box-shadow: 3px 3px 0px #f5f0ff;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Progress bar */
+.stProgress > div > div > div > div {
+    background-color: #6200ea;
+}

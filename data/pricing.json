@@ -1,0 +1,48 @@
+{
+    "gpu_pricing": {
+      "NVIDIA T4": {
+        "on_demand": 0.76,
+        "spot": 0.23,
+        "reserved_1yr": 0.53,
+        "reserved_3yr": 0.38
+      },
+      "NVIDIA A10G": {
+        "on_demand": 1.40,
+        "spot": 0.42,
+        "reserved_1yr": 0.98,
+        "reserved_3yr": 0.70
+      },
+      "NVIDIA A100": {
+        "on_demand": 2.89,
+        "spot": 0.87,
+        "reserved_1yr": 2.02,
+        "reserved_3yr": 1.45
+      },
+      "NVIDIA H100": {
+        "on_demand": 5.76,
+        "spot": 1.73,
+        "reserved_1yr": 4.03,
+        "reserved_3yr": 2.88
+      }
+    },
+    "instance_pricing_multipliers": {
+      "flex-economy": 0.6,
+      "flex-standard": 1.0,
+      "flex-performance": 1.4
+    },
+    "region_pricing_multipliers": {
+      "us-east": 1.0,
+      "us-west": 1.05,
+      "europe-west": 1.1,
+      "asia-east": 1.15
+    },
+    "storage_pricing": {
+      "standard": 0.02,
+      "performance": 0.08,
+      "archive": 0.004
+    },
+    "network_pricing": {
+      "egress_per_gb": 0.08,
+      "ingress": 0.0
+    }
+  }
