@@ -1,6 +1,13 @@
 # FlexAI Workload Configuration Advisor
 
-![FlexAI Advisor](static/images/advisor-demo.png)
+![image](https://github.com/user-attachments/assets/3f6f1424-6c3a-4ca2-8a20-b5d9fc1966ae)
+![image](https://github.com/user-attachments/assets/27ffa038-4d87-4bca-a8a3-19ab503aa961)
+![image](https://github.com/user-attachments/assets/ef0c4168-cff8-46e4-828b-08e3c9e0a033)
+![image](https://github.com/user-attachments/assets/d8f9b442-08a8-450d-b61a-0ff00c4fbb99)
+
+
+
+
 
 ## Why This Project Matters
 
